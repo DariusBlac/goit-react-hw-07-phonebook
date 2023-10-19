@@ -12,7 +12,7 @@ export const ContactList = () => {
   };
 
   let filteredContacts = null;
-  filteredContacts = contacts.filter(el =>
+  filteredContacts = contacts.items.filter(el =>
     el.name.toLowerCase().includes(filter.toLowerCase())
   );
 
@@ -35,7 +35,7 @@ export const ContactList = () => {
     <ul className={css.list}>
       {filteredContacts
         ? createdListItems(filteredContacts)
-        : createdListItems(contacts)}
+        : createdListItems(contacts.items)}
     </ul>
   );
 };

@@ -10,7 +10,7 @@ export const FormCreateContact = () => {
   const dispatch = useDispatch();
 
   const createContact = body => {
-    const isAlreadyExist = contacts.find(
+    const isAlreadyExist = contacts.items.find(
       el => el.name.toLowerCase() === body.name.toLowerCase()
     );
     if (isAlreadyExist)
