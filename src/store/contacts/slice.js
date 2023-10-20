@@ -38,7 +38,7 @@ export const contactsSlice = createSlice({
           el => el.id === payload
         );
         state.contacts.items.splice(deleteItemIndex, 1);
-        Notiflix.Notify.success('Contact added delete');
+        Notiflix.Notify.success('Contact delete');
       })
       .addMatcher(action => action.type.endsWith('/pending'), handlePending)
       .addMatcher(action => action.type.endsWith('/rejected'), handleRejected);
